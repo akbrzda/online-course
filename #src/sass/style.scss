@@ -44,7 +44,7 @@ body {
 }
 
 .container {
-  width: 1152px;
+  max-width: 1152px;
   margin: 0 auto;
 }
 
@@ -78,8 +78,12 @@ body {
     transition: 0.3s;
     position: relative;
 
-    &+& {
-      padding-left: 40px;
+    &:last-child {
+      padding: 0
+    }
+
+    & {
+      padding-right: 40px;
     }
 
     &:hover .submenu__list {
@@ -92,7 +96,7 @@ body {
       position: absolute;
       display: block;
       top: 3px;
-      right: -18px;
+      right: 20px;
       transition: 0.3s;
 
     }
@@ -982,6 +986,7 @@ body {
     width: 538px;
     height: 64px;
     padding: 21px 298px 21px 24px;
+    outline: none;
   }
 
   &__subscribe-btn {
